@@ -4,6 +4,6 @@ branches:
   only:
     - master
     - develop
-script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-addons:
-  artifacts: true
+script:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - java -jar ./target/travis_test-1.0-SNAPSHOT.jar
