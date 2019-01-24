@@ -5,19 +5,5 @@ branches:
     - master
     - develop
 script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-deploy:
-  - provider: s3
-    access_key_id: AKIAIFD2X4SDJD3YCZMQ
-    secret_access_key:
-      secure: oIcd7+HT4VEuQ0G1wCUQk/Wu6AXeaOAOXgpjR3wrzyg0Lyk+PmQa/NQojOCMOBQ676XuIyxo+Rp59dKl78kEe9lGIa6IYLHwxLgT5Wc2Vj7wM9khCDGSDAMlCRb49pwvi9RXwmVnBUtdCF7vSjbceDlI9M4ZBNk3ASRN4mls3eRROnhajewcWrgLcQZPBKG0MC4QU8lR37Te8AXNKd4MtUDHpQtzcxNO1K0L6cj4rQTYWeTUFjCiULSu4NuigtE6wFbc/dDWD41iKF6/6ZX/P9oerrmWz/GCJgX8rH5gjOHEXWiHTgZqVLN9Pl8SPAgNmKSWxOwiUzy5mmLzpOzZjGbS6JBAyptxR+0UxSiZgxhfVj7F9IEsUb3bsLKYkyovPxLBYgNZulxGzykuhecNuZVgCOtBh1BtPRAXGzQ49DX4NataOCLcjWjZLbU5Hh2WJp7MOdQNpsJMu1BjtolHEbCNPlhV7Q6oAKeataBlQQqLqrwoUX8nSBZoWY1vfLpKb5T+vpefGzrkBbgmKAaCKMdQHeT/qTugK0EggVGHgSpeXWc2tqsZn3iwZA/7vbk/vUM8ALpMrQaAyde8PPE3xZ2oKOvm8Yg9TbtEQNom/fe8Jno4mUSqu4IxHiCbQAlNx9XCVrvlvn5iRifVDIyG9Hv/2pXEKr64Qgio29t4BFk=
-    bucket: sw.jigul.repo.develop
-    on:
-      branch: develop
-
-  - provider: s3
-    access_key_id: AKIAIFD2X4SDJD3YCZMQ
-    secret_access_key:
-      secure: oIcd7+HT4VEuQ0G1wCUQk/Wu6AXeaOAOXgpjR3wrzyg0Lyk+PmQa/NQojOCMOBQ676XuIyxo+Rp59dKl78kEe9lGIa6IYLHwxLgT5Wc2Vj7wM9khCDGSDAMlCRb49pwvi9RXwmVnBUtdCF7vSjbceDlI9M4ZBNk3ASRN4mls3eRROnhajewcWrgLcQZPBKG0MC4QU8lR37Te8AXNKd4MtUDHpQtzcxNO1K0L6cj4rQTYWeTUFjCiULSu4NuigtE6wFbc/dDWD41iKF6/6ZX/P9oerrmWz/GCJgX8rH5gjOHEXWiHTgZqVLN9Pl8SPAgNmKSWxOwiUzy5mmLzpOzZjGbS6JBAyptxR+0UxSiZgxhfVj7F9IEsUb3bsLKYkyovPxLBYgNZulxGzykuhecNuZVgCOtBh1BtPRAXGzQ49DX4NataOCLcjWjZLbU5Hh2WJp7MOdQNpsJMu1BjtolHEbCNPlhV7Q6oAKeataBlQQqLqrwoUX8nSBZoWY1vfLpKb5T+vpefGzrkBbgmKAaCKMdQHeT/qTugK0EggVGHgSpeXWc2tqsZn3iwZA/7vbk/vUM8ALpMrQaAyde8PPE3xZ2oKOvm8Yg9TbtEQNom/fe8Jno4mUSqu4IxHiCbQAlNx9XCVrvlvn5iRifVDIyG9Hv/2pXEKr64Qgio29t4BFk=
-    bucket: sw.jigul.repo.release
-    on:
-      branch: master
+addons:
+  artifacts: true
